@@ -18,14 +18,15 @@ namespace ProgForDB
         
         readonly ClientService service;
         public int SelectedID = -1;
+        private ReportService reportService = new ReportService();
 
         public Form1()
         {
-
             InitializeComponent();
             service = new ClientService(this);
-
+            this.dataGridView1.RowHeaderMouseClick += dataGridView1_RowHeaderMouseClick;
         }
+
 
         private void Form1_Load(object sender, EventArgs e) { service.DisplayAdvertiserData(); }
 
@@ -125,5 +126,13 @@ namespace ProgForDB
         private void REbutton_Click(object sender, EventArgs e) => service.ChangeAdvertiser();
 
         private void DELbutton_Click(object sender, EventArgs e) => service.DelAdvertiser(SelectedID.ToString());
-    }
+
+        private void button_Excel_Click(object sender, EventArgs e) => reportService.ExportExcel(reportDataGrid);
+
+        private void button1_Click(object sender, EventArgs e) => reportService.DisplayDefaultReport(reportDataGrid);
+
+        private void button2_Click(object sender, EventArgs e) => reportService.DisplayBCReport(reportDataGrid, reportYear.Text);
+
+        private void button_Word_Click(object sender, EventArgs e) => reportService.ExportWord(reportDataGrid);
+     }
 }

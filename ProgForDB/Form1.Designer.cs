@@ -65,11 +65,25 @@
             this.label8 = new System.Windows.Forms.Label();
             this.TableTitle_Field = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.reportYear = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_Word = new System.Windows.Forms.Button();
+            this.button_Excel = new System.Windows.Forms.Button();
+            this.reportDataGrid = new System.Windows.Forms.DataGridView();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reportDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +111,7 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.databaseNameField);
             this.groupBox1.Controls.Add(this.CreateDB_button);
-            this.groupBox1.Location = new System.Drawing.Point(9, 10);
+            this.groupBox1.Location = new System.Drawing.Point(2, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -122,7 +136,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.tableNameField);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(9, 86);
+            this.groupBox2.Location = new System.Drawing.Point(2, 80);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -263,7 +277,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(189, 7);
+            this.label6.Location = new System.Drawing.Point(182, 1);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(9, 390);
@@ -291,7 +305,7 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.TableTitle_Field);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(202, 11);
+            this.groupBox3.Location = new System.Drawing.Point(195, 5);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -465,6 +479,111 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Компания";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(976, 426);
+            this.tabControl1.TabIndex = 7;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(968, 400);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "9-10";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.reportYear);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.button_Word);
+            this.tabPage2.Controls.Add(this.button_Excel);
+            this.tabPage2.Controls.Add(this.reportDataGrid);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(968, 400);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "11-12";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 267);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(25, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Год";
+            // 
+            // reportYear
+            // 
+            this.reportYear.Location = new System.Drawing.Point(7, 286);
+            this.reportYear.Name = "reportYear";
+            this.reportYear.Size = new System.Drawing.Size(202, 20);
+            this.reportYear.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(7, 356);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(203, 38);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Запрос 2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 312);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(203, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Запрос 1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button_Word
+            // 
+            this.button_Word.Location = new System.Drawing.Point(7, 51);
+            this.button_Word.Name = "button_Word";
+            this.button_Word.Size = new System.Drawing.Size(203, 38);
+            this.button_Word.TabIndex = 2;
+            this.button_Word.Text = "Word";
+            this.button_Word.UseVisualStyleBackColor = true;
+            this.button_Word.Click += new System.EventHandler(this.button_Word_Click);
+            // 
+            // button_Excel
+            // 
+            this.button_Excel.Location = new System.Drawing.Point(7, 7);
+            this.button_Excel.Name = "button_Excel";
+            this.button_Excel.Size = new System.Drawing.Size(203, 38);
+            this.button_Excel.TabIndex = 1;
+            this.button_Excel.Text = "Excel";
+            this.button_Excel.UseVisualStyleBackColor = true;
+            this.button_Excel.Click += new System.EventHandler(this.button_Excel_Click);
+            // 
+            // reportDataGrid
+            // 
+            this.reportDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reportDataGrid.Location = new System.Drawing.Point(216, 7);
+            this.reportDataGrid.Name = "reportDataGrid";
+            this.reportDataGrid.Size = new System.Drawing.Size(746, 387);
+            this.reportDataGrid.TabIndex = 0;
+            // 
             // programBindingSource
             // 
             this.programBindingSource.DataSource = typeof(ProgForDB.Program);
@@ -473,11 +592,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 401);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1000, 452);
+            this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "ЛР9-10";
@@ -489,9 +605,14 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reportDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -536,6 +657,16 @@
         public System.Windows.Forms.TextBox TablePatronymic_Field;
         public System.Windows.Forms.TextBox TableName_Field;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView reportDataGrid;
+        private System.Windows.Forms.Button button_Excel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Word;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox reportYear;
     }
 }
 

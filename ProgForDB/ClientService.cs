@@ -63,13 +63,13 @@ namespace ProgForDB
                     command.ExecuteNonQuery();
                     DisplayAdvertiserData();
                     ClearData();
+                    System.Windows.Forms.MessageBox.Show("Клиент добавлен");
                 }
                 else
                 {
                     System.Windows.Forms.MessageBox.Show("Введите данные");
                 }
             }
-            
         }
 
         public void DelAdvertiser(string id)
@@ -95,7 +95,6 @@ namespace ProgForDB
 
         public void ChangeAdvertiser()
         {
-            
                 if (form.SelectedID != -1 && form.TableTitle_Field.Text != "" && form.TableSurname_Field.Text != "" && form.TableName_Field.Text != "" && form.TablePatronymic_Field.Text != "" && form.TableCity_Field.Text != "" && form.TableTel_Field.Text != "")
                 {
                     using (var connection = new SqlConnection(this.connection_string))
@@ -112,7 +111,7 @@ namespace ProgForDB
                         command.Parameters.AddWithValue("@telephone", form.TableTel_Field.Text.Trim());
                         command.ExecuteNonQuery();
                         connection.Close();
-                        System.Windows.Forms.MessageBox.Show("Рекламодатель обновлен");
+                        System.Windows.Forms.MessageBox.Show("Клиент обновлен");
                         DisplayAdvertiserData();
                         ClearData();
                     }
@@ -121,7 +120,6 @@ namespace ProgForDB
                 {
                     System.Windows.Forms.MessageBox.Show("Введите данные");
                 }
-            
         }
     }
 }
